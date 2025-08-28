@@ -1,0 +1,77 @@
+{
+    "Python Utility Functions": {
+        "prefix": "templ",
+    "body": [
+        "import sys ,random , math ,bisect ,heapq , threading",
+        "from heapq import heappush , heappop , heapify",
+        "from collections import defaultdict, deque , Counter",
+        "from itertools import combinations , permutations",
+        "mod = 10**9 + 7",
+        "R = random.randint(1, 2**31) # dic[ i ^ R] # c = Counter(x ^ R for x in a)",
+        "",
+
+        "DIRECTIONS_4 = [(-1, 0), (1, 0), (0, -1), (0, 1)]",
+        "DIRECTIONS_8 = [(-1, -1), (-1, 1), (1, -1), (1, 1), (-1, 0), (1, 0), (0, -1), (0, 1)]",
+        "",
+        "def dir8(x,y): return [(x,y),(x,-y),(-x,y),(-x,-y),(y,x),(y,-x),(-y,x),(-y,-x)]",
+        "def dir4(x,y): return [(x,y),(x,-y),(-x,y),(-x,-y)]",
+        "def iinp(): return int(sys.stdin.readline())",
+        "def sinp(): return sys.stdin.readline().strip()",
+        "def linp(): return [int(i) for i in sys.stdin.readline().strip().split()]",
+        "def lcm(x, y): return x * y // math.gcd(x, y)",
+        "def ceil_div(x, y): return (x + y - 1) // y",
+        "def bin_search(arr, x): return bisect.bisect_left(arr, x)",
+        "def debug(*args):print(\"DEBUG:\", *args, file=sys.stderr)",
+        "def inbound(x, y, n, m): return 0 <= x < n and 0 <= y < m",
+        "",
+        "def solve():",
+        "    # ",
+        "   ",
+        "",
+        "#t = 1 ",
+        "t = iinp()",
+        "for _ in range(t):",
+        "    solve()"
+    ],
+    "description": "Advanced Python template for competitive programming with fast input, utility functions, and direction vectors."
+
+    },
+    "Prime Range Function": {
+    "prefix": "prime_range",
+    "body": [
+        "import math",
+        "from bisect import bisect_left",
+        "",
+        "def prime_range(left, right):",
+        "    arr = [True] * (right + 1) ",
+        "    until = int(math.sqrt(right)) + 1",
+        "    for i in range(2, until):",
+        "        j = i * i  ",
+        "        while j <= right and arr[i] == True:",
+        "            arr[j] = False ",
+        "            j += i",
+        "    ans = [i for i in range(right + 1) if arr[i] == True]",
+        "    x = max(2, bisect_left(ans, left))",
+        "    return ans[x:]"
+    ],
+    "description": "Generates a list of prime numbers within a given range using the Sieve of Eratosthenes."
+    },
+    "recurtion": {
+        "prefix": "recurtion limit",
+        "body": [
+            "def main():",
+            "    solve()",
+            "",
+            "if __name__ == \"__main__\":",
+            "    sys.setrecursionlimit(1 << 30)",
+            "    threading.stack_size(1 << 27)",
+            "",
+            "    main_thread = threading.Thread(target=main)",
+            "    main_thread.start()",
+            "    main_thread.join()"
+        ],
+    "description": "main"
+
+    }
+
+}
