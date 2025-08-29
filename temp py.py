@@ -2,6 +2,8 @@ import sys ,random , math ,bisect ,heapq , threading
 from heapq import heappush , heappop , heapify
 from collections import defaultdict, deque , Counter
 from itertools import combinations , permutations
+
+sys.stdin = open("sample.txt", "r")
 mod = 10**9 + 7
 R = random.randint(1, 2**31) # dic[ i ^ R] # c = Counter(x ^ R for x in a)
 
